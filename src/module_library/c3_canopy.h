@@ -76,7 +76,9 @@ class c3_canopy : public direct_module
           Tp_S{get_input(input_quantities, "Tp_S")},
           Vcmax_at_25{get_input(input_quantities, "Vcmax_at_25")},
           Vcmax_c{get_input(input_quantities, "Vcmax_c")},
-          Vcmax_Ea{get_input(input_quantities, "Vcmax_Ea")},
+          Vcmax_Ha{get_input(input_quantities, "Vcmax_Ha")},
+          Vcmax_Hd{get_input(input_quantities, "Vcmax_Hd")},
+          Vcmax_S{get_input(input_quantities, "Vcmax_S")},
           windspeed{get_input(input_quantities, "windspeed")},
           windspeed_height{get_input(input_quantities, "windspeed_height")},
 
@@ -157,7 +159,9 @@ class c3_canopy : public direct_module
     double const& Tp_S;
     double const& Vcmax_at_25;
     double const& Vcmax_c;
-    double const& Vcmax_Ea;
+    double const& Vcmax_Ha;
+    double const& Vcmax_Hd;
+    double const& Vcmax_S;
     double const& windspeed;
     double const& windspeed_height;
 
