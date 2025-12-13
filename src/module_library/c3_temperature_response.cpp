@@ -18,7 +18,6 @@ using conversion_constants::celsius_to_kelvin;
  *  - `Kc`
  *  - `Ko`
  *  - `RL_norm`
- *  - `Vcmax_norm`
  *
  *  The following parameters are calculated using a second-order polynomial
  *  temperature response (`polynomial_response()`) as in Bernacchi et al.
@@ -30,6 +29,7 @@ using conversion_constants::celsius_to_kelvin;
  *  temperature response (`johnson_eyring_williams_response()`) as in Harley et
  *  al. (1992):
  *  - `TPU_norm`
+ *  - `Vcmax_norm`
  *
  * References:
  *  - [Harley, P. C., Thomas, R. B., Reynolds, J. F. & Strain, B. R. Plant, Cell
@@ -58,5 +58,5 @@ c3_param_at_tleaf c3_temperature_response(
         /* RL_norm =    */ arrhenius_exponential(param.RL_c, param.RL_Ea, Tleaf_K),
         /* theta =      */ polynomial_response(param.theta_0, param.theta_1, param.theta_2, Tleaf),
         /* Tp_norm =    */ johnson_eyring_williams_response(param.Tp_c, param.Tp_Ha, param.Tp_Hd, param.Tp_S, Tleaf_K),
-        /* Vcmax_norm = */ arrhenius_exponential(param.Vcmax_c, param.Vcmax_Ea, Tleaf_K)};
+        /* Vcmax_norm = */ johnson_eyring_williams_response(param.Vcmax_c, param.Vcmax_Ha, param.Vcmax_Hd, param.Vcmax_S,Tleaf_K)};
 }
