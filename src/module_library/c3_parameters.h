@@ -130,7 +130,9 @@ string_vector c3_parameters::get_inputs()
         "Tp_Hd",       // J / mol
         "Tp_S",        // J / K / mol
         "Vcmax_c",     // dimensionless
-        "Vcmax_Ea"     // J / mol
+        "Vcmax_Ha"     // J / mol
+        "Vcmax_Hd"     // J / mol
+        "Vcmax_S"      // J / K / mol
     };
 }
 
@@ -174,7 +176,9 @@ void c3_parameters::do_operation() const
         Tp_Hd,
         Tp_S,
         Vcmax_c,
-        Vcmax_Ea};
+        Vcmax_Ha,
+        Vcmax_Hd,
+        Vcmax_S};
 
     // Calculate values of key parameters at leaf temperature
     c3_param_at_tleaf c3_param = c3_temperature_response(tr_param, Tleaf);
