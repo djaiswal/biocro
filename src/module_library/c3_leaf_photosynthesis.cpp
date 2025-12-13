@@ -51,7 +51,9 @@ string_vector c3_leaf_photosynthesis::get_inputs()
         "Tp_S",                         // J / K / mol
         "Vcmax_at_25",                  // micromol / m^2 / s
         "Vcmax_c",                      // dimensionless
-        "Vcmax_Ea",                     // J / mol
+        "Vcmax_Ha",                     // J / mol
+        "Vcmax_Hd",                     // J / mol
+        "Vcmax_S",                      // J / K / mol
         "windspeed"                     // m / s
     };
 }
@@ -101,7 +103,9 @@ void c3_leaf_photosynthesis::do_operation() const
         Tp_Hd,
         Tp_S,
         Vcmax_c,
-        Vcmax_Ea};
+        Vcmax_Ha,
+        Vcmax_Hd,
+        Vcmax_S};
 
     // Make an initial guess for boundary layer conductance
     double const gbw_guess{1.2};  // mol / m^2 / s

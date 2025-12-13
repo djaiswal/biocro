@@ -42,7 +42,9 @@ class c3_parameters : public direct_module
           Tp_Hd{get_input(input_quantities, "Tp_Hd")},
           Tp_S{get_input(input_quantities, "Tp_S")},
           Vcmax_c{get_input(input_quantities, "Vcmax_c")},
-          Vcmax_Ea{get_input(input_quantities, "Vcmax_Ea")},
+          Vcmax_Ha{get_input(input_quantities, "Vcmax_Ha")},
+          Vcmax_Hd{get_input(input_quantities, "Vcmax_Hd")},
+          Vcmax_S{get_input(input_quantities, "Vcmax_S")},
 
           // Get pointers to output quantities
           Gstar_op{get_op(output_quantities, "Gstar")},
@@ -84,7 +86,9 @@ class c3_parameters : public direct_module
     double const& Tp_Hd;
     double const& Tp_S;
     double const& Vcmax_c;
-    double const& Vcmax_Ea;
+    double const& Vcmax_Ha;
+    double const& Vcmax_Hd;
+    double const& Vcmax_S;
 
     // Pointers to output quantities
     double* Gstar_op;
