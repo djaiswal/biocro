@@ -69,7 +69,9 @@ string_vector c3_canopy::get_inputs()
         "Tp_S",                 // J / K / mol
         "Vcmax_at_25",          // micromol / m^2 / s
         "Vcmax_c",              // dimensionless
-        "Vcmax_Ea",             // J / mol
+        "Vcmax_Ha",             // J / mol
+        "Vcmax_Hd",             // J / mol
+        "Vcmax_S",              // J / K / mol
         "windspeed",            // m / s
         "windspeed_height"      // m
     };
@@ -113,7 +115,9 @@ void c3_canopy::do_operation() const
         Tp_Hd,
         Tp_S,
         Vcmax_c,
-        Vcmax_Ea};
+        Vcmax_Ha,
+        Vcmax_Hd,
+        Vcmax_S};
 
     const canopy_photosynthesis_outputs can_result = c3CanAC(
         tr_param,
