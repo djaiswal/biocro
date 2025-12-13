@@ -114,7 +114,9 @@ class c3_assimilation : public direct_module
           Tp_S{get_input(input_quantities, "Tp_S")},
           Vcmax_at_25{get_input(input_quantities, "Vcmax_at_25")},
           Vcmax_c{get_input(input_quantities, "Vcmax_c")},
-          Vcmax_Ea{get_input(input_quantities, "Vcmax_Ea")},
+          Vcmax_Ha{get_input(input_quantities, "Vcmax_Ha")},
+          Vcmax_Hd{get_input(input_quantities, "Vcmax_Hd")},
+          Vcmax_S{get_input(input_quantities, "Vcmax_S")},
 
           // Get pointers to output quantities
           Assim_op{get_op(output_quantities, "Assim")},
@@ -176,7 +178,9 @@ class c3_assimilation : public direct_module
     double const& Tp_S;
     double const& Vcmax_at_25;
     double const& Vcmax_c;
-    double const& Vcmax_Ea;
+    double const& Vcmax_Ha;
+    double const& Vcmax_Hd;
+    double const& Vcmax_S;
 
     // Pointers to output quantities
     double* Assim_op;
@@ -238,7 +242,9 @@ string_vector c3_assimilation::get_inputs()
         "Tp_S",                         // J / K / mol
         "Vcmax_at_25",                  // micromol / m^2 / s
         "Vcmax_c",                      // dimensionless
-        "Vcmax_Ea",                     // J / mol
+        "Vcmax_Ha",                     // J / mol
+        "Vcmax_Hd",                     // J / mol
+        "Vcmax_S",                      // J / K / mol
     };
 }
 
@@ -284,7 +290,9 @@ void c3_assimilation::do_operation() const
         Tp_Hd,
         Tp_S,
         Vcmax_c,
-        Vcmax_Ea};
+        Vcmax_Ha,
+        Vcmax_Hd,
+        Vcmax_S};
 
     photosynthesis_outputs c3_results = c3photoC(
         tr_param,
