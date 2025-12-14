@@ -23,7 +23,9 @@ class c3_parameters : public direct_module
           Gstar_c{get_input(input_quantities, "Gstar_c")},
           Gstar_Ea{get_input(input_quantities, "Gstar_Ea")},
           Jmax_c{get_input(input_quantities, "Jmax_c")},
-          Jmax_Ea{get_input(input_quantities, "Jmax_Ea")},
+          Jmax_Ha{get_input(input_quantities, "Jmax_Ha")},
+          Jmax_Hd{get_input(input_quantities, "Jmax_Hd")},
+          Jmax_S{get_input(input_quantities, "Jmax_S")},
           Kc_c{get_input(input_quantities, "Kc_c")},
           Kc_Ea{get_input(input_quantities, "Kc_Ea")},
           Ko_c{get_input(input_quantities, "Ko_c")},
@@ -67,7 +69,9 @@ class c3_parameters : public direct_module
     double const& Gstar_c;
     double const& Gstar_Ea;
     double const& Jmax_c;
-    double const& Jmax_Ea;
+    double const& Jmax_Ha;
+    double const& Jmax_Hd;
+    double const& Jmax_S;
     double const& Kc_c;
     double const& Kc_Ea;
     double const& Ko_c;
@@ -111,7 +115,9 @@ string_vector c3_parameters::get_inputs()
         "Gstar_c",     // dimensionless
         "Gstar_Ea",    // J / mol
         "Jmax_c",      // dimensionless
-        "Jmax_Ea",     // J / mol
+        "Jmax_Ha",     // J / mol
+        "Jmax_Hd",     // J / mol
+        "Jmax_S",      // J / K / mol
         "Kc_c",        // dimensionless
         "Kc_Ea",       // J / mol
         "Ko_c",        // dimensionless
@@ -158,7 +164,9 @@ void c3_parameters::do_operation() const
         Gstar_c,
         Gstar_Ea,
         Jmax_c,
-        Jmax_Ea,
+        Jmax_Ha,
+        Jmax_Hd,
+        Jmax_S,
         Kc_c,
         Kc_Ea,
         Ko_c,
