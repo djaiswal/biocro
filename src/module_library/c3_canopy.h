@@ -35,7 +35,9 @@ class c3_canopy : public direct_module
           heightf{get_input(input_quantities, "heightf")},
           Jmax_at_25{get_input(input_quantities, "Jmax_at_25")},
           Jmax_c{get_input(input_quantities, "Jmax_c")},
-          Jmax_Ea{get_input(input_quantities, "Jmax_Ea")},
+          Jmax_Ha{get_input(input_quantities, "Jmax_Ha")},
+          Jmax_Hd{get_input(input_quantities, "Jmax_Hd")},
+          Jmax_S{get_input(input_quantities, "Jmax_S")},
           k_diffuse{get_input(input_quantities, "k_diffuse")},
           Kc_c{get_input(input_quantities, "Kc_c")},
           Kc_Ea{get_input(input_quantities, "Kc_Ea")},
@@ -118,7 +120,9 @@ class c3_canopy : public direct_module
     double const& heightf;
     double const& Jmax_at_25;
     double const& Jmax_c;
-    double const& Jmax_Ea;
+    double const& Jmax_Ha;
+    double const& Jmax_Hd;
+    double const& Jmax_S;
     double const& k_diffuse;
     double const& Kc_c;
     double const& Kc_Ea;
