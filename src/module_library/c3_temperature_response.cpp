@@ -14,7 +14,6 @@ using conversion_constants::celsius_to_kelvin;
  *  response (`arrhenius_exponential()`) as in Bernacchi et al. (2001) and
  *  Bernacchi et al. (2003):
  *  - `Gstar`
- *  - `Jmax_norm`
  *  - `Kc`
  *  - `Ko`
  *  - `RL_norm`
@@ -30,6 +29,7 @@ using conversion_constants::celsius_to_kelvin;
  *  al. (1992):
  *  - `TPU_norm`
  *  - `Vcmax_norm`
+ *  - `Jmax_norm`
  *
  * References:
  *  - [Harley, P. C., Thomas, R. B., Reynolds, J. F. & Strain, B. R. Plant, Cell
@@ -51,7 +51,7 @@ c3_param_at_tleaf c3_temperature_response(
 
     return c3_param_at_tleaf{
         /* Gstar =      */ arrhenius_exponential(param.Gstar_c, param.Gstar_Ea, Tleaf_K),
-        /* Jmax_norm =  */ arrhenius_exponential(param.Jmax_c, param.Jmax_Ea, Tleaf_K),
+        /* Jmax_norm =  */ johnson_eyring_williams_response(param.Jmax_c, param.Jmax_Ha, param.Jmax_Hd, param.Jmax_S,Tleaf_K)};
         /* Kc =         */ arrhenius_exponential(param.Kc_c, param.Kc_Ea, Tleaf_K),
         /* Ko =         */ arrhenius_exponential(param.Ko_c, param.Ko_Ea, Tleaf_K),
         /* phi_PSII =   */ polynomial_response(param.phi_PSII_0, param.phi_PSII_1, param.phi_PSII_2, Tleaf),
