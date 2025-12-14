@@ -39,7 +39,9 @@ class c3_leaf_photosynthesis : public direct_module
           height{get_input(input_quantities, "height")},
           Jmax_at_25{get_input(input_quantities, "Jmax_at_25")},
           Jmax_c{get_input(input_quantities, "Jmax_c")},
-          Jmax_Ea{get_input(input_quantities, "Jmax_Ea")},
+          Jmax_Ha{get_input(input_quantities, "Jmax_Ha")},
+          Jmax_Hd{get_input(input_quantities, "Jmax_Hd")},
+          Jmax_S{get_input(input_quantities, "Jmax_S")},
           Kc_c{get_input(input_quantities, "Kc_c")},
           Kc_Ea{get_input(input_quantities, "Kc_Ea")},
           Ko_c{get_input(input_quantities, "Ko_c")},
@@ -110,7 +112,9 @@ class c3_leaf_photosynthesis : public direct_module
     double const& height;
     double const& Jmax_at_25;
     double const& Jmax_c;
-    double const& Jmax_Ea;
+    double const& Jmax_Ha;
+    double const& Jmax_Hd;
+    double const& Jmax_S;
     double const& Kc_c;
     double const& Kc_Ea;
     double const& Ko_c;
