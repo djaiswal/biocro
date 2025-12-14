@@ -28,7 +28,9 @@ string_vector c3_canopy::get_inputs()
         "heightf",                      // m^(-1)
         "Jmax_at_25",                   // micromol / m^2 / s
         "Jmax_c",                       // dimensionless
-        "Jmax_Ea",                      // J / mol
+        "Jmax_Ha",                      // J / mol
+        "Jmax_Hd",                      // J / mol
+        "Jmax_S",                       // J / K / mol
         "k_diffuse",                    // dimensionless
         "Kc_c",                         // dimensionless
         "Kc_Ea",                        // J / mol
@@ -97,7 +99,9 @@ void c3_canopy::do_operation() const
         Gstar_c,
         Gstar_Ea,
         Jmax_c,
-        Jmax_Ea,
+        Jmax_Ha,
+        Jmax_Hd,
+        Jmax_S
         Kc_c,
         Kc_Ea,
         Ko_c,
