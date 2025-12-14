@@ -4,8 +4,10 @@
 struct c3_temperature_response_parameters {
     double Gstar_c;     //!< Arrhenius scaling parameter for Gstar (dimensionless)
     double Gstar_Ea;    //!< Arrhenius activation energy for Gstar (J / mol)
-    double Jmax_c;      //!< Arrhenius scaling parameter for Jmax_norm
-    double Jmax_Ea;     //!< Arrhenius activation energy for Jmax_norm (J / mol)
+    double Jmax_c;      //!< Johnson, Eyring, & Williams scaling parameter for Jmax_norm
+    double Jmax_Ha;     //!< Johnson, Eyring, & Williams activation energy for Jmax_norm (J / mol)
+    double Jmax_Hd;     //!< Johnson, Eyring, & Williams enthalpy of deactivation for Jmax_norm (J / mol)
+    double Jmax_S;      //!< Johnson, Eyring, & Williams entropy parameter for Jmax_norm (J / K / mol)
     double Kc_c;        //!< Arrhenius scaling parameter for Kc (dimensionless)
     double Kc_Ea;       //!< Arrhenius activation energy for Kc (J / mol)
     double Ko_c;        //!< Arrhenius scaling parameter for Ko (dimensionless)
