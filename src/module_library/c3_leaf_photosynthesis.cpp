@@ -25,7 +25,9 @@ string_vector c3_leaf_photosynthesis::get_inputs()
         "height",                       // m
         "Jmax_at_25",                   // micromol / m^2 / s
         "Jmax_c",                       // dimensionless
-        "Jmax_Ea",                      // J / mol
+        "Jmax_Ha",                      // J / mol
+        "Jmax_Hd",                      // J / mol
+        "Jmax_S",                       // J / K / mol
         "Kc_c",                         // dimensionless
         "Kc_Ea",                        // J / mol
         "Ko_c",                         // dimensionless
@@ -85,7 +87,9 @@ void c3_leaf_photosynthesis::do_operation() const
         Gstar_c,
         Gstar_Ea,
         Jmax_c,
-        Jmax_Ea,
+        Jmax_Ha,
+        Jmax_Hd,
+        Jmax_S
         Kc_c,
         Kc_Ea,
         Ko_c,
