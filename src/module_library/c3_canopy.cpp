@@ -101,7 +101,7 @@ void c3_canopy::do_operation() const
         Jmax_c,
         Jmax_Ha,
         Jmax_Hd,
-        Jmax_S
+        Jmax_S,
         Kc_c,
         Kc_Ea,
         Ko_c,
